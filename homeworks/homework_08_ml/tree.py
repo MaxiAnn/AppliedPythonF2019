@@ -4,7 +4,7 @@
 
 import numpy as np
 
-
+# var Regression
 class Tree:
     def __init__(self, criterion, max_depth, min_samples_leaf):
         """
