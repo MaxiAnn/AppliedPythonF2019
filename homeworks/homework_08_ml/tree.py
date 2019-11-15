@@ -6,13 +6,15 @@ import numpy as np
 
 # var Regression
 class Tree:
-    def __init__(self, criterion, max_depth, min_samples_leaf):
+    def __init__(self, criterion=regression, max_depth=None, min_samples_leaf):
         """
         :param criterion: method to determine splits
         :param max_depth: maximum depth of tree. If None depth of tree is not constrained
         :param min_samples_leaf: the minimum number of samples required to be at a leaf node
         """
-        raise NotImplementedError
+        self.criterion = criterion
+        self.max_depth = max_depth
+        self.min_samples_leaf = min_samples_leaf
 
     def fit(self, X_train, y_train):
         """
